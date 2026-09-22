@@ -21,10 +21,10 @@ git commit -m "feat: initial release of BIGDATA MCP Gateway with auto-install" |
 
 REPO_URL="$1"
 if [ -z "$REPO_URL" ]; then
-    read -p "GitHub 원격 저장소 주소 입력 (기본: https://github.com/devdhlabs/bigdata-mcp.git): " REPO_URL
+    read -p "GitHub 원격 저장소 주소 입력 (기본: https://github.com/DoHyun-95/bigdata-mcp.git): " REPO_URL
 fi
 if [ -z "$REPO_URL" ]; then
-    REPO_URL="https://github.com/devdhlabs/bigdata-mcp.git"
+    REPO_URL="https://github.com/DoHyun-95/bigdata-mcp.git"
 fi
 
 echo "[3/4] 원격 저장소 설정..."

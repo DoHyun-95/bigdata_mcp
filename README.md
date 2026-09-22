@@ -10,7 +10,7 @@
 
 ### 🤖 AI 에이전트에게 설치를 맡길 때 (가장 추천)
 Claude Code, Antigravity, Cursor 등의 채팅창에 아래와 같이 입력하세요:
-> *"이 저장소(`https://github.com/devdhlabs/bigdata-mcp`)를 보고 BIGDATA MCP 서버를 내 환경에 설치해줘. 내 토큰은 `bigdata_pat_...` 이야."*
+> *"이 저장소(`https://github.com/DoHyun-95/bigdata-mcp`)를 보고 BIGDATA MCP 서버를 내 환경에 설치해줘. 내 토큰은 `bigdata_pat_...` 이야."*
 
 에이전트가 [`AGENT_INSTALL.md`](./AGENT_INSTALL.md)를 스스로 읽고 빌드와 설정을 전자동으로 완료합니다.
 
@@ -23,14 +23,14 @@ Claude Code, Antigravity, Cursor 등의 채팅창에 아래와 같이 입력하�
 2. **저장소 클론 & 실행**:
    - **Windows 사용자**: 
      ```cmd
-     git clone https://github.com/devdhlabs/bigdata-mcp.git
+     git clone https://github.com/DoHyun-95/bigdata-mcp.git
      cd bigdata-mcp
      install.bat
      ```
      (토큰 입력창이 뜨면 발급받은 토큰을 붙여넣기만 하면 Claude Desktop과 Antigravity 설정이 1초 만에 자동 완료됩니다.)
    - **Mac / Linux 사용자**:
      ```bash
-     git clone https://github.com/devdhlabs/bigdata-mcp.git
+     git clone https://github.com/DoHyun-95/bigdata-mcp.git
      cd bigdata-mcp
      ./install.sh
      ```

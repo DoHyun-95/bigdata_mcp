@@ -26,10 +26,10 @@ echo.
 echo [3/4] GitHub 원격 저장소 URL 확인...
 set REPO_URL=%1
 if "%REPO_URL%"=="" (
-    set /p REPO_URL="GitHub 원격 저장소 주소를 입력하세요 (기본: https://github.com/devdhlabs/bigdata-mcp.git): "
+    set /p REPO_URL="GitHub 원격 저장소 주소를 입력하세요 (기본: https://github.com/DoHyun-95/bigdata-mcp.git): "
 )
 if "%REPO_URL%"=="" (
-    set REPO_URL=https://github.com/devdhlabs/bigdata-mcp.git
+    set REPO_URL=https://github.com/DoHyun-95/bigdata-mcp.git
 )
 
 git remote remove origin 2>nul
