@@ -1,0 +1,47 @@
+{
+  "name": "bigdata-mcp-gateway",
+  "version": "1.0.0",
+  "description": "BIGDATA Platform MCP Gateway for Codex, Claude Code, and Antigravity",
+  "main": "dist/server.js",
+  "type": "module",
+  "bin": {
+    "bigdata-mcp": "./dist/server.js",
+    "bigdata-setup": "./setup.mjs"
+  },
+  "scripts": {
+    "build": "tsc",
+    "setup": "node setup.mjs",
+    "start": "node dist/server.js",
+    "dev": "tsx src/server.ts"
+  },
+  "files": [
+    "dist",
+    "src",
+    "setup.mjs",
+    "README.md",
+    "DEVDH_RULES.md",
+    "AGENT_INSTALL.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devdhlabs/bigdata-mcp.git"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "claude",
+    "antigravity",
+    "cursor",
+    "devdhlabs",
+    "bigdata"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.6.1",
+    "axios": "^1.7.9"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.0",
+    "typescript": "^5.7.3"
+  }
+}
