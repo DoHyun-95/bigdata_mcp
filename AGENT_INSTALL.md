@@ -98,3 +98,22 @@ When authoring English questions for BIGDATA:
    - `순서`: Paragraphs in `content_1`((A)), `content_2`((B)), `content_3`((C)).
    - `삽입`: Sentence to insert in `content_1`.
    - `요약`: Summary sentence in `content_1`.
+
+---
+
+## 🏷 6. Problem Title (`quiz_name`) vs Type (`kr_title`) & Interactive Naming
+
+### 📌 Role Distinction
+- **`kr_title` (공식 문제 유형)**: 수능/내신 기준의 공식 25개 문제 유형명 (예: `주제`, `단일빈칸`, `어법박스`, `순서`, `삽입`, `요약` 등).
+- **`quiz_name` (문제 제목 / 시험지 타이틀)**: 사용자/원장님이 직접 명명하는 개별 문항 또는 워크시트 제목 (예: `2024년 고1 3월 학평 31번 변형`, `1학기 기말고사 대비 빈칸 워크시트` 등). BIGDATA 웹 사이트의 보관함 카드 상단 및 인쇄/다운로드 헤더 타이틀로 출력됩니다.
+
+### 💬 Interactive Question Naming Rule for Agents
+문제를 생성할 때, 에이전트는 사용자에게 문제 제목을 사전에 능동적으로 확인하거나 입력받도록 합니다:
+- **에이전트 권장 질문 예시**:
+  > *"문제를 생성하기 전에, 문제 제목(`quiz_name`)을 무엇으로 지정할까요? (예: '2024년 고1 3월 31번 변형' / 따로 말씀하지 않으시면 '단일빈칸'과 같은 문제 유형명으로 자동 지정됩니다)"*
+- **사용자가 제목을 지정한 경우**:
+  - `quiz_name`: 사용자가 지정한 제목 (예: `"1학기 기말 31번 변형"`)
+  - `kr_title`: 해당 문제의 공식 유형 (예: `"단일빈칸"`)
+- **사용자가 제목을 생략하거나 따로 언급하지 않은 경우**:
+  - `quiz_name`에 `kr_title` 값을 넣거나 생략합니다 (BIGDATA 시스템이 자동으로 `kr_title`을 기본 제목으로 채워 저장합니다).
+

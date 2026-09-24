@@ -195,8 +195,44 @@ export function registerTools(apiClient: BigdataApiClient) {
           },
           questions: {
             type: 'array',
-            description: '검증할 Question 객체 배열 (1~20개)',
-            items: { type: 'object' },
+            description: '검증할 Question 객체 배열 (1~20개). 사용자 지정 문제 제목(quiz_name), 공식 유형명(kr_title) 등을 포함합니다.',
+            items: {
+              type: 'object',
+              properties: {
+                quiz_name: {
+                  type: 'string',
+                  description: '개별 문제 제목 또는 시험지명 (예: "2024년 고1 3월 학평 31번 변형"). 사용자에게 질문하여 입력받은 제목을 사용하며, 미지정 시 공식 유형명(kr_title)이 기본값으로 사용됩니다.',
+                },
+                kr_title: {
+                  type: 'string',
+                  description: '25개 수능/내신 공식 문제 유형명 (예: "주제", "단일빈칸", "어법박스", "순서", "삽입" 등)',
+                },
+                cate_list_6: {
+                  type: 'string',
+                  description: '대분류 카테고리 (대의파악, 고난이도, 글의흐름, 어법어휘, 세부사항)',
+                },
+                type_id: {
+                  type: 'string',
+                  description: '문제 유형 ID (예: qt:101, get_question_schema 참고)',
+                },
+                question: {
+                  type: 'string',
+                  description: '유형별 공식 고정 발문 (예: "다음 빈칸에 들어갈 말로 가장 적절한 것은?")',
+                },
+                choices: {
+                  type: 'array',
+                  description: '5지선다 선택지 목록 (options 또는 choices)',
+                },
+                answer_choice_ids: {
+                  type: 'array',
+                  description: '정답 선택지 ID 배열 (예: ["c3"]) 또는 answer_index (0-4)',
+                },
+                explanation: {
+                  type: 'string',
+                  description: '정답 해설 및 오답 분석',
+                },
+              },
+            },
           },
         },
       },
@@ -221,8 +257,44 @@ export function registerTools(apiClient: BigdataApiClient) {
           },
           questions: {
             type: 'array',
-            description: '저장할 Question 객체 배열 (1~20개)',
-            items: { type: 'object' },
+            description: '저장할 Question 객체 배열 (1~20개). 사용자 지정 문제 제목(quiz_name), 공식 유형명(kr_title) 등을 포함합니다.',
+            items: {
+              type: 'object',
+              properties: {
+                quiz_name: {
+                  type: 'string',
+                  description: '개별 문제 제목 또는 시험지명 (예: "2024년 고1 3월 학평 31번 변형"). 사용자에게 질문하여 입력받은 제목을 사용하며, 미지정 시 공식 유형명(kr_title)이 기본값으로 사용됩니다.',
+                },
+                kr_title: {
+                  type: 'string',
+                  description: '25개 수능/내신 공식 문제 유형명 (예: "주제", "단일빈칸", "어법박스", "순서", "삽입" 등)',
+                },
+                cate_list_6: {
+                  type: 'string',
+                  description: '대분류 카테고리 (대의파악, 고난이도, 글의흐름, 어법어휘, 세부사항)',
+                },
+                type_id: {
+                  type: 'string',
+                  description: '문제 유형 ID (예: qt:101, get_question_schema 참고)',
+                },
+                question: {
+                  type: 'string',
+                  description: '유형별 공식 고정 발문 (예: "다음 빈칸에 들어갈 말로 가장 적절한 것은?")',
+                },
+                choices: {
+                  type: 'array',
+                  description: '5지선다 선택지 목록 (options 또는 choices)',
+                },
+                answer_choice_ids: {
+                  type: 'array',
+                  description: '정답 선택지 ID 배열 (예: ["c3"]) 또는 answer_index (0-4)',
+                },
+                explanation: {
+                  type: 'string',
+                  description: '정답 해설 및 오답 분석',
+                },
+              },
+            },
           },
         },
       },
