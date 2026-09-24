@@ -98,6 +98,10 @@ When authoring English questions for BIGDATA:
    - `순서`: Paragraphs in `content_1`((A)), `content_2`((B)), `content_3`((C)).
    - `삽입`: Sentence to insert in `content_1`.
    - `요약`: Summary sentence in `content_1`.
+6. **Clean Options for Underline/Marker Questions (`어법밑줄`, `어휘밑줄`, `지칭` 등)**:
+   - 본문 `engData`에만 밑줄 마커(`★①단어☆` ~ `★⑤단어☆`)를 기재합니다.
+   - `options` 선택지 배열에는 마커(`★`, `☆`)나 원문자(`①`~`⑤`)를 절대 넣지 않고, 순수한 단어/어구(예: `["which", "determined", "parked", "proudly", "counting"]`)만 전달합니다. (화면 렌더링 시 번호가 자동 부여되므로 중복 표기를 방지합니다.)
+
 
 ---
 
