@@ -123,7 +123,8 @@ export function registerTools(apiClient: BigdataApiClient) {
         },
       },
       handler: async (args: { passage_id: string }) => {
-        return await apiClient.get(`/passages/${encodeURIComponent(args.passage_id)}`);
+        const cleanId = args.passage_id.replace(/^passage:/, '');
+        return await apiClient.get(`/passages/${encodeURIComponent(cleanId)}`);
       },
     },
     {
@@ -227,6 +228,14 @@ export function registerTools(apiClient: BigdataApiClient) {
                   type: 'array',
                   description: '정답 선택지 ID 배열 (예: ["c3"]) 또는 answer_index (0-4)',
                 },
+                engData: {
+                  type: 'string',
+                  description: '영어 지문 원문 또는 변형 본문 (지문 출력을 위해 필수 제공)',
+                },
+                korData: {
+                  type: 'string',
+                  description: '한국어 해석 본문 (선택)',
+                },
                 explanation: {
                   type: 'string',
                   description: '정답 해설 및 오답 분석',
@@ -288,6 +297,14 @@ export function registerTools(apiClient: BigdataApiClient) {
                 answer_choice_ids: {
                   type: 'array',
                   description: '정답 선택지 ID 배열 (예: ["c3"]) 또는 answer_index (0-4)',
+                },
+                engData: {
+                  type: 'string',
+                  description: '영어 지문 원문 또는 변형 본문 (지문 출력을 위해 필수 제공)',
+                },
+                korData: {
+                  type: 'string',
+                  description: '한국어 해석 본문 (선택)',
                 },
                 explanation: {
                   type: 'string',
