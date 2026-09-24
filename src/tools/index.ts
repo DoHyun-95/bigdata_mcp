@@ -242,7 +242,7 @@ export function registerTools(apiClient: BigdataApiClient) {
     },
     {
       name: 'save_questions',
-      description: '검증된 문항들을 BIGDATA 개인 보관함(비공개)에 신규 저장합니다. (멱등키 필수)',
+      description: '검증된 문항들을 BIGDATA 개인 보관함(비공개)에 신규 저장합니다. [주의] 문항 출제 즉시 자동 호출하지 마시고, 반드시 사용자에게 먼저 문항 내용(지문, 선택지, 정답, 해설)을 보여주고 검수/승인(좋아/저장해줘 등)을 받은 후 호출해야 합니다.',
       inputSchema: {
         type: 'object',
         required: ['questions', 'idempotency_key'],
